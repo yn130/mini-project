@@ -12,6 +12,12 @@ export default function AddTodo({ addItem }) {
     });
   };
 
+  const enterKeyEventHandler = (e) => {
+    if (e.key === 'Enter') {
+      onButtonClick()
+    }
+  }
+
   return (
     <div className="AddTodo">
       <input
@@ -19,9 +25,10 @@ export default function AddTodo({ addItem }) {
         placeholder="Add your new Todo"
         value={todoItem.title}
         onChange={(e) => setTodoItem({ title: e.target.value })}
+        onKeyDown={enterKeyEventHandler}
       />
       <button onClick={onButtonClick}>ADD</button>
-      <button>DELETE</button>
+
     </div>
   );
 }

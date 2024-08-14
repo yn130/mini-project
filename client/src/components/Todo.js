@@ -29,7 +29,7 @@ export default function Todo({ item, deleteItem }) {
     const { title, ...rest } = todoItem;
     setTodoItem({
       title: e.target.value,
-      ...rest,
+      ...rest
     });
   };
 

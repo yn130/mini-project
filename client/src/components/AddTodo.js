@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import '../styles/AddTodo.scss'
+
 
 export default function AddTodo({ addItem }) {
   const [todoItem, setTodoItem] = useState({
